@@ -1,0 +1,50 @@
+
+.wrapper{
+display: grid;
+height: 90vh;
+grid-template-columns: 0.4fr 0.2fr 1.2fr 1.2fr 0.7fr;
+grid-template-rows: 0.6fr 1fr 1fr;
+grid-template-areas:
+"grid1 grid2 grid2 grid2 grid3"
+"grid4 grid4 grid5 grid6 grid10"
+"grid7 grid7 grid8 grid9 grid10";
+gap: 10px;
+padding: 20px;
+overflow: hidden;
+}
+.wrapper div{
+    background: red;
+}
+
+.grid1{
+grid-area: grid1;
+
+}
+.grid2{
+    grid-area: grid2;
+}
+.grid3{
+    grid-area: grid3;
+}
+.grid4{
+    grid-area: grid4;
+}
+.grid5{
+    grid-area: grid5;
+}
+.grid6{
+    grid-area: grid6;
+}
+.grid7{
+    grid-area: grid7;
+}
+.grid8{
+    grid-area: grid8;
+}
+.grid9{
+    grid-area: grid9;
+}
+   
+.grid10{
+    grid-area: grid10;
+}
