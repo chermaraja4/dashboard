@@ -1,4 +1,6 @@
-
+body{
+    background: #ebebeb;
+}
 .wrapper{
 display: grid;
 height: 90vh;
@@ -8,12 +10,15 @@ grid-template-areas:
 "grid1 grid2 grid2 grid2 grid3"
 "grid4 grid4 grid5 grid6 grid10"
 "grid7 grid7 grid8 grid9 grid10";
-gap: 10px;
+gap: 20px;
 padding: 20px;
 overflow: hidden;
+
 }
 .wrapper div{
-    background: red;
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
 }
 
 .grid1{
@@ -48,3 +53,4 @@ grid-area: grid1;
 .grid10{
     grid-area: grid10;
 }
+
