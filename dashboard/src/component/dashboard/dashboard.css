@@ -1,32 +1,36 @@
-body{
-    background: #ebebeb;
+.dashboard{
+    background-color: #ebebeb;
 }
 .wrapper{
 display: grid;
-height: 90vh;
-grid-template-columns: 0.4fr 0.2fr 1.2fr 1.2fr 0.7fr;
-grid-template-rows: 0.6fr 1fr 1fr;
+/* height: 90vh; */
+grid-template-columns: 0.6fr 0.2fr 1.3fr 1.3fr 0.6fr;
+grid-template-rows: 0.5fr 1fr 1fr;
 grid-template-areas:
-"grid1 grid2 grid2 grid2 grid3"
+"grid1 grid1 grid2 grid2 grid3"
 "grid4 grid4 grid5 grid6 grid10"
 "grid7 grid7 grid8 grid9 grid10";
 gap: 20px;
 padding: 20px;
 overflow: hidden;
-
 }
-.wrapper div{
+.position{   
     background: #ffffff;
-    padding: 10px;
-    text-align: center;
+    padding: 5px 
 }
 
 .grid1{
 grid-area: grid1;
-
+padding: 20px;
+}
+.dashboard .header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 .grid2{
     grid-area: grid2;
+    background: #ffffff;   
 }
 .grid3{
     grid-area: grid3;
@@ -48,9 +52,162 @@ grid-area: grid1;
 }
 .grid9{
     grid-area: grid9;
-}
-   
+}   
 .grid10{
-    grid-area: grid10;
+    grid-area: grid10;}
+
+.progress-bar {
+background-color: #44af69 !important;
+}.second_card{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
 }
+.CircularProgressbar .CircularProgressbar-path {
+    stroke:#44af69 !important;
+}.third_card{
+    /* text-align: center; */
+    background: #b4dfc3;
+    padding: 10px ;
+    flex-direction: column;
+    align-items: center;
+    display: flex;     
+}
+.Launch_Date{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+.flag{
+    transform: rotate(-10deg);
+}
+.days{
+    font-size: 24px;
+    font-weight: 600;
+}
+.month{
+    font-size: 12px;
+    line-height: 20px;
+}
+.fa-flag-checkered{
+    color: #44af69 ;
+}
+.semiCircle{
+    position: relative;
+    width: 120px; 
+    height: 100px;
+     margin-top:20px 
+}
+#container .CircularProgressbar{
+    height: 100px;
+}
+.circle_text{
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 28px;
+font-weight: 500;
+
+}
+.forth_card{
+    display: flex;
+    align-items: center; 
+   
+}
+.line_height{
+    padding: 15px 10px;
+}
+.forth_card .number{
+    font-size: 13px !important;
+    width: 20%;
+    text-align: start;
+}
+.forth_card .text{
+    font-size: 12px !important;
+    width: 80%;
+    text-align: start;
+}
+.left_side{
+    font-size: 12px !important;
+    width: 50%;
+    text-align: start !important;;
+}
+.Ride_side{
+    font-size: 12px !important;
+    width: 50%;
+    text-align: start !important;;
+}
+.spacing{
+    padding:  10px; 
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 992px) { 
+
+    .wrapper{ 
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows:repeat(6, 1fr);      
+        grid-template-areas:
+          "grid1 grid3"
+           "grid2 grid2"
+           "grid4 grid5"
+           "grid6 grid7"
+            "grid8 grid10"
+           "grid9 grid10"
+        }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .wrapper{ 
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(6, 1fr);     
+        grid-template-areas:
+        "grid1 "
+        "grid2"
+        "grid3"
+        "grid4 "
+        "grid5"
+        "grid6"
+        "grid7 "
+        "grid8"
+        "grid9"
+       "grid10";
+        }
+
+}
+.time{
+display: flex;
+gap: 50px;
+}
+.username{
+    margin-top: 20px;
+}
+.date{
+ display: flex;
+gap: 50px;
+height: 60%;
+align-items: center;
+}   
+
+/* @media only screen and (max-width: 992px) {
+
+    .wrapper{       
+        grid-template-columns:1fr 1fr;
+        grid-template-areas: 
+"grid2 grid2"
+"grid3 grid4"
+"grid5 grid6"
+"grid7  grid8"
+"grid9  grid1"
+"grid10 grid10";
+        }
+} */
+
+
+
+
+  
+  
+
 

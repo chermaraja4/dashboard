@@ -4,7 +4,7 @@
     overflow: hidden;
 } */
 
-.container {
+.login {
     position: relative;
     background-image: url("../../Asset/images.jfif");
     background-position: center;
@@ -13,7 +13,7 @@
     height: 100vh;
     filter: blur(8px); /* Adding blur background image */
   }
-  .container::before{
+  .login::before{
     background: linear-gradient(120deg,#8e44ad ,#2980b9);
     content: '';
     display: block;

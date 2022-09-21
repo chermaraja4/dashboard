@@ -1,42 +1,47 @@
 import "./table.css"
 import ProgressBar from 'react-bootstrap/ProgressBar';
-
+import axios from 'axios';
+import { useEffect,useState } from "react";
 export default function Table(){
-    return (
-<table id="customers">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-    <th>age</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-  </tr> 
 
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>Germany</td>
-    <td><ProgressBar now={60}/></td>
-  </tr> 
- 
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-    <td>Germany</td>
-  </tr>
-</table>
+const [data,setData]=useState([])
+  useEffect(()=>{
+    axios.get('https://jsonplaceholder.typicode.com/users', {
+    
+    })
+    .then(function (response) {
+      setData(response.data)
+      console.log(response);
+    })
+  },[])
+  console.log(data)
+
+    return (
+      <div className="table-wrapper">
+        <div className="inner-wrapper"> 
+        <table id="customers">
+          <thead>
+           <tr>
+             <th>Company</th>
+             <th>Contact</th>   
+             <th>age</th>
+           </tr>
+         </thead>
+       <tbody>
+
+       {data.length>0 && data.map((list,index)=>{
+        return (
+      <tr>
+      <td>{index+1}</td>
+      <td>{list.username}</td>     
+      <td><ProgressBar now={list.id*10}/></td>
+    </tr> 
+    )
+  })}
+   </tbody>
+ </table>
+ </div>
+</div>
 
     )
 }

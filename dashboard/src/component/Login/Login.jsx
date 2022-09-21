@@ -12,6 +12,7 @@ export default function Login() {
 
   const userLogin=()=>{
     if(name==="admin" && password==="admin"){
+      localStorage.setItem("userName", "Admin")
       navigate('/Home')
      
     }else{
@@ -21,7 +22,7 @@ export default function Login() {
   }
   return (
     <div> 
-    <div className="container" > </div>
+    <div className="login" > </div>
     <div className="center"> 
     <div className="card">
       <form > 
